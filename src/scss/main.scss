@@ -1,0 +1,79 @@
+@import 'colors';
+@import 'navbar';
+@import 'core';
+
+.intro {
+    display: flex;
+    height: 700px;
+    background: linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,0.8)), url('../assets/img/bg.jpg') no-repeat 100% fixed;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
+
+      img {
+        max-height: 10rem;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $white-color;
+        margin: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $white-color;
+      }
+    }
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .service-item {
+    padding: 1rem;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    
+    &__icon {
+      float: left;
+      background: $primary-color;
+      padding: 16px;
+      border-radius: 50%;
+      transition: 0.5s;
+
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 1.5rem;
+        color: $white-color;
+      }
+    }
+
+    &__title {
+      margin-left: 80px;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    &__description {
+      margin-left: 80px;
+      line-height: 1.5;
+    }
+  }
+}
