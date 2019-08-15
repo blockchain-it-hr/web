@@ -83,3 +83,43 @@
     }
   }
 }
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .content {
+    max-width: 500px;
+    text-align: left;
+
+    @media screen and (max-width: $break-md) {
+      text-align: center;
+    }
+
+    h3 {
+      font-family: 'Montserrat';
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    p {
+      line-height: 1.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__art {
+    object-fit: cover;
+    max-width: 450px;
+    max-height: 500px;
+    margin-left: 6rem;
+
+    @media screen and (max-width: $break-md) {
+      margin-top: 3rem;
+      margin-left: 0;
+    }
+  }
+}
