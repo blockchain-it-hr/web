@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900|Open+Sans:400,700&display=swap');
 
 $global-font-family: 'Open Sans', sans-serif;
+$break-sm: 800px;
+$break-md: 1000px;
 
 html {
     line-height: 1.15;
@@ -11,6 +13,7 @@ body {
     margin: 0;
     font-family: $global-font-family;
     color: #3a3a3a;
+    transition: all 0.2s ease-in-out;
 }
 
 .header {
@@ -20,19 +23,31 @@ body {
     right: 0;
     left: 0;
     z-index: 9999;
+
+    @media screen and (max-width: $break-md) {
+        background-color: $black-color;
+    }
 }
 
 .container {
     width: 80vw;
     margin: auto;
+
+    @media screen and (max-width: $break-md) {
+        width: 90vw
+    }
 }
 
 .section {
-    padding: 4rem;
+    padding: 6rem 4rem;
     background-color: $white-color;
 
     &--gray {
         background-color: $gray-color;
+    }
+
+    @media screen and (max-width: $break-sm) {
+        padding: 4rem 2rem;
     }
 
     .section-heading {
