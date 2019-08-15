@@ -5,7 +5,7 @@ $break-sm: 800px;
 $break-md: 1000px;
 
 html {
-    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
 }
 
 body {
