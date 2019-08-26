@@ -147,10 +147,10 @@
     display: flex;
     justify-content: center;
     padding: 1rem;
-    object-fit: contain;
 
     img {
       max-width: 500px;
+      object-fit: contain;
 
       @media screen and (max-width: $break-md) {
         width: 100%;
