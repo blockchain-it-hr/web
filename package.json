@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "rimraf dist/ && parcel build src/index.html --public-url ./",
-    "start": "parcel dist/index.html"
+    "start": "serve dist/"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,7 @@
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "serve": "^11.1.0"
+  }
 }
