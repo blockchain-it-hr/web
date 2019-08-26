@@ -1,11 +1,14 @@
 @import 'colors';
+@import 'mixins';
 @import 'core';
 @import 'navbar';
+@import 'utils';
+@import 'footer';
 
-.intro {
+.leading-banner {
   display: flex;
-  height: 700px;
-  background: linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,0.8)), url('../assets/img/bc_hand.png') no-repeat 100% center;
+  height: 800px;
+  background: linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,0.6)), url('../assets/img/leading_banner.jpeg') no-repeat 100% fixed;
   background-size: cover;
   align-items: center;
   justify-content: center;
@@ -23,6 +26,7 @@
     }
 
     h1 {
+      font-family: $primary-font;
       font-weight: 700;
       font-size: 4rem;
       color: $white-color;
@@ -35,43 +39,10 @@
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       color: $white-color;
       text-align: center;
-    }
-  }
-}
-
-.careers {
-  display: flex;
-  height: 700px;
-  background: url('../assets/img/join_us.jpg') no-repeat 100% center;
-  background-size: contain;
-  align-items: center;
-  justify-content: center;
-
-  &__content {
-    display: block;
-    width: 50%;
-    padding: 1rem;
-
-    @media screen and (max-width: $break-md) {
-      width: 100%;
-    }
-
-    h3 {
-      font-family: 'Montserrat';
-      font-size: 2.5rem;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      color: #ffffff;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 2rem;
-      margin-bottom: 0;
-      color: #ffffff;
+      font-family: $secondary-font;
     }
   }
 }
@@ -80,10 +51,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-
-  @media screen and (max-width: $break-md) {
-    justify-content: center;
-  }
 
   &__item {
     max-width: 400px;
@@ -110,6 +77,43 @@
   &__content {
     text-align: center;
     margin-bottom: 1rem;
+    font-family: $secondary-font;
+  }
+}
+
+.contributions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    img {
+      max-height: 200px;
+      object-fit: contain;
+    }
+  }
+
+  &__item {
+    max-width: 400px;
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: $secondary-font;
   }
 }
 
@@ -131,15 +135,25 @@
 
     h3 {
       font-family: 'Montserrat';
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-top: 0;
       margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       line-height: 2rem;
-      margin-bottom: 0;
+      margin-bottom: 3rem;
+      font-family: $secondary-font;
+    }
+
+    a {
+      text-decoration: none;
+      
+      i {
+        vertical-align: middle;
+        margin-left: .2rem;
+      }
     }
   }
 
@@ -155,6 +169,22 @@
       @media screen and (max-width: $break-md) {
         width: 100%;
       }
+    }
+  }
+}
+
+.careers {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 2rem;
+
+  img {
+    object-fit: contain;
+    max-height: 500px;
+
+    @media screen and (max-width: $break-sm) {
+      max-height: 300px;
     }
   }
 }
@@ -190,83 +220,4 @@
       transition: 0.3s ease-in-out;
     }
   }
-}
-
-/* Footer */
-
-#footer {
-  padding: 6em 0 4em 0 ;
-  background-color: #1d242a;
-  text-align: center;
-}
-
-#footer .icons {
-  font-size: 1.25em;
-}
-
-#footer .icons a {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-#footer .icons a:hover {
-  color: #fff;
-}
-
-#footer .copyright {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8em;
-  letter-spacing: 0.225em;
-  list-style: none;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-#footer .copyright li {
-  border-left: solid 1px rgba(255, 255, 255, 0.5);
-  display: inline-block;
-  line-height: 1em;
-  margin-left: 1em;
-  padding-left: 1em;
-}
-
-#footer .copyright li:first-child {
-  border-left: 0;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-#footer .copyright li a {
-  color: inherit;
-}
-
-#footer .copyright li a:hover {
-  color: #fff;
-}
-
-@media screen and (max-width: 480px) {
-
-  #footer .copyright li {
-    border: 0;
-    display: block;
-    line-height: 1.65em;
-    margin: 0;
-    padding: 0.5em 0;
-  }
-
-}
-
-@media screen and (max-width: 980px) {
-
-  #footer {
-    padding: 4em 3em 2em 3em ;
-  }
-
-}
-
-@media screen and (max-width: 736px) {
-
-  #footer {
-    padding: 3em 2em 1em 2em ;
-  }
-
 }

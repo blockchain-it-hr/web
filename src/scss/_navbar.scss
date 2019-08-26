@@ -33,11 +33,6 @@
     &__item {
         display: inline-block;
         padding: 1rem;
-        transition: all .3s ease-in-out;
-        
-        &:hover {
-            border-bottom: 1px solid $white-color;
-        }
     }
 
     &__link {
@@ -46,9 +41,10 @@
         font-size: 1rem;
         font-weight: 700;
         text-transform: uppercase;
+        transition: 0.5s ease-in-out;
 
         &:hover {
-            color: $gray-color;
+            @include opacity(0.5);
         }
     }
 }
